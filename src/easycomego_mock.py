@@ -47,11 +47,13 @@ ROUTES_LIST = []
 for i in DEP_CODE_LIST:
    for j in DEST_CODE_LIST:
       for k in TRANS_TYPE_LIST:
-         ROUTES_LIST.append({
-            "transportCode": k,
-            "departureCode": i,
-            "destinationCode": j
-         })
+         if i != j:
+           ROUTES_LIST.append({
+              "transportCode": k,
+              "departureCode": i,
+              "destinationCode": j
+           })
+         # end if
       # end for
    # end for
 # end for
