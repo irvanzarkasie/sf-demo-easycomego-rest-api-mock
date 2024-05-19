@@ -56,7 +56,7 @@ for i in DEP_CODE_LIST:
    # end for
 # end for
 
-@app.route('/getRoutes', methods=['POST'])
+@app.route('/getRoutes', methods=['GET'])
 def getRoutes():
   return jsonify(ROUTES_LIST)
 # end def
